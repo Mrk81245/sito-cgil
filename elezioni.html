@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FLAI CGIL - Elezioni / Votazioni</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+  <!-- ===========================
+       HEADER + NAV
+  ============================ -->
+  <header>
+    <div class="logo">
+      <img src="img/FLAI_logo.png" alt="Logo FLAI CGIL" />
+    </div>
+
+    <!-- Menu Desktop -->
+    <nav class="main-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="elezioni.html">Elezioni</a></li>
+        <li><a href="contratti.html">Contratti</a></li>
+        <li><a href="avvisi.html">Avvisi</a></li>
+        <li><a href="sicurezza.html">Sicurezza</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </nav>
+
+    <!-- Menu Mobile -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- Overlay Menu Mobile -->
+  <div id="menuOverlay" class="menu-overlay">
+    <div class="menu-content">
+      <span class="close-btn" onclick="toggleMenu()">×</span>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="elezioni.html">Elezioni</a></li>
+        <li><a href="contratti.html">Contratti</a></li>
+        <li><a href="avvisi.html">Avvisi</a></li>
+        <li><a href="sicurezza.html">Sicurezza</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===========================
+       CONTENUTO PAGINA
+  ============================ -->
+  <main>
+
+    <!-- Link Ufficiale -->
+    <section class="link-elezioni">
+      <h2>📅 Elezioni 8 e 9 Giugno 2025</h2>
+      <p>Per tutte le informazioni ufficiali sui referendum dell'8 e 9 giugno a Novara, visita il sito del Comune:</p>
+      <a class="btn-link" href="https://www.comune.novara.it/it/articolo/referendum-8-e-9-giugno/53921" target="_blank">
+        🌐 Vai al sito del Comune di Novara
+      </a>
+    </section>
+
+    <!-- Galleria Locandine -->
+    <section class="locandine-elezioni">
+      <h2>Locandine Informative</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="img/locandina_assemblea_14_maggio.jpg" target="_blank">
+              <img src="img/locandina_assemblea_14_maggio.jpg" alt="Assemblea 14 Maggio" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="img/locandina_flai_cgil_2024.jpg" target="_blank">
+              <img src="img/locandina_flai_cgil_2024.jpg" alt="FLAI CGIL 2024" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="img/referendum_5si.jpg" target="_blank">
+              <img src="img/referendum_5si.jpg" alt="Referendum 5 Sì" />
+            </a>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===========================
+       FOOTER
+  ============================ -->
+  <footer>
+    <p>&copy; 2025 FLAI CGIL - Tutti i diritti riservati</p>
+  </footer>
+
+  <!-- ===========================
+       SCRIPT
+  ============================ -->
+  <script src="js/script.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      loop: false,
+      coverflowEffect: {
+        rotate: 30,
+        stretch: 0,
+        depth: 150,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+
+</body>
+</html>
